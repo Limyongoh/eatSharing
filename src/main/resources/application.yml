@@ -1,0 +1,19 @@
+
+spring:
+#  profiles:
+#    #application-{abc}.yml ?? ???? -> include? {abc}? ???? ??? yml ?,? ???
+#    #-> ?? ??? application profile ??????? ?
+#    include: oauth, jwt
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todo_project1
+    username: todo
+    password: todo
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: update # ??? create? ????? ???? none
+      use-new-id-generator-mappings: false   # ????? id ?? ??
+    #database-platform: org.hibernate.dialect.PostgreSQLDialect
