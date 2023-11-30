@@ -76,8 +76,9 @@ function Main() {
 
 
   // api 호출 테스트 완료
-  const  apiCall = async (e) =>{
-    const response = await axios.get('/api/test/home');
+  const  login = async (e) =>{
+    const response = await axios.post('/users/signIn',loginInput);
+    debugger;
     console.log(response);
   }
 
@@ -149,7 +150,9 @@ function Main() {
                 <Button 
                   style={{width:"300px"}} 
                   variant="contained"
-                  onClick={(e)=>{alert("로그인")}}>
+                  onClick={(e)=>{
+                    // alert("로그인")
+                    login();}}>
                     로그인
                 </Button>
 
